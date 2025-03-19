@@ -2,10 +2,27 @@ package uz.mbf.newsapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+data class CustomColorScheme(
+    val title: Color,
+    val background: Color,
+    val bodyText: Color,
+    val buttonText: Color,
+    val placeholder: Color,
+    val secondaryButton: Color,
+    val input: Color,
+    val primary: Color,
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+    // Error Colors
+    val errorContainer: Color,
+    val error: Color,
+
+    // Success Colors
+    val successDefault: Color,
+    val successDark: Color,
+    val successDarkMode: Color,
+
+    // Warning Colors
+    val warningDefault: Color,
+    val warningDark: Color,
+    val warningDarkMode: Color
+)
