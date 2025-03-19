@@ -4,9 +4,9 @@ import androidx.compose.ui.graphics.Color
 
 data class CustomColorScheme(
     val title: Color,
+    val secondaryTitle: Color,
     val background: Color,
     val bodyText: Color,
-    val buttonText: Color,
     val placeholder: Color,
     val secondaryButton: Color,
     val input: Color,

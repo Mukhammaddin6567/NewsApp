@@ -16,9 +16,9 @@ import androidx.compose.ui.platform.LocalContext
 // Light Theme Colors
 val LightColors = CustomColorScheme(
     title = Color(0xFF050505), // ✅
+    secondaryTitle = Color(0xFF667080), // ✅
     background = Color(0xFFFFFFFF), // ✅
     bodyText = Color(0xFF4E4B66), // ✅
-    buttonText = Color(0xFF667080), // ✅
     placeholder = Color(0xFFA0A3BD), // ✅
     secondaryButton = Color(0xFFEEF1F4), // ✅
     input = Color(0xFFEEF1F4), // ✅
@@ -42,9 +42,9 @@ val LightColors = CustomColorScheme(
 // Dark Theme Colors
 val DarkColors = CustomColorScheme(
     title = Color(0xFFE4E6EB), // ✅
+    secondaryTitle = Color(0xFF667080), // ✅
     background = Color(0xFF1C1E21), // ✅
     bodyText = Color(0xFFB0B3B8), // ✅
-    buttonText = Color(0xFF667080), // ✅
     placeholder = Color(0xFFA0A3BD), // ✅
     secondaryButton = Color(0xFFEEF1F4), // ✅
     input = Color(0xFF3A3B3C), // ✅
@@ -100,4 +100,4 @@ fun NewsAppTheme(
 
 // Helper function to access colors easily
 @Composable
-fun customColors() = LocalCustomColors.current
+fun colors() = LocalCustomColors.current
