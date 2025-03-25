@@ -1,9 +1,10 @@
-package uz.mbf.newsapp.ui.theme
+package uz.mbf.coreui.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 @Immutable
@@ -60,12 +61,14 @@ val appTypography = AppTypography(
         fontSize = 48.sp,
         lineHeight = 72.sp,
         fontWeight = FontWeight.Normal,
+        letterSpacing = 0.12.sp
     ),
     displayLargeBold = TextStyle(
         fontFamily = Poppins,
         fontSize = 48.sp,
         lineHeight = 72.sp,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        letterSpacing = 0.12.sp
     ),
 
     displayMedium = TextStyle(
@@ -73,6 +76,7 @@ val appTypography = AppTypography(
         fontSize = 28.sp,
         lineHeight = 48.sp,
         fontWeight = FontWeight.Normal,
+        letterSpacing = 0.12.sp
     ),
     displayMediumBold = TextStyle(
         fontFamily = Poppins,

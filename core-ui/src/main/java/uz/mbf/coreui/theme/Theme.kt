@@ -1,4 +1,4 @@
-package uz.mbf.newsapp.ui.theme
+package uz.mbf.coreui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable

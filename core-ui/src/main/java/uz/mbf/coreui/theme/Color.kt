@@ -1,4 +1,4 @@
-package uz.mbf.newsapp.ui.theme
+package uz.mbf.coreui.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
