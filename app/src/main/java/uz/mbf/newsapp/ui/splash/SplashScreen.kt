@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import uz.mbf.coreui.R
-import uz.mbf.newsapp.ui.theme.NewsAppTheme
+import uz.mbf.coreui.theme.NewsAppTheme
 import uz.mbf.coreui.utils.AppPreview
 
 @Composable
