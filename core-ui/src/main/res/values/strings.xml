@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_title1">Lorem Ipsum is simply dummy</string>
+    <string name="onboarding_subtitle1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="onboarding_title2">Lorem Ipsum is simply dummy</string>
+    <string name="onboarding_subtitle2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="onboarding_title3">Lorem Ipsum is simply dummy</string>
+    <string name="onboarding_subtitle3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+</resources>
