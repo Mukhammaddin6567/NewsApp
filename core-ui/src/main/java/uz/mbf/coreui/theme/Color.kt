@@ -1,11 +1,43 @@
 package uz.mbf.coreui.theme
 
+import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
+fun ColorScheme.toAppColors(): AppColors {
+    return AppColors(
+        white = Color.White,
+        black = Color.Black,
+        title = onBackground,
+        secondaryTitle = onSurfaceVariant,
+        background = background,
+        bodyText = onSurface,
+        placeholder = outlineVariant,
+        secondaryButton = secondaryContainer,
+        input = surfaceVariant,
+        primary = primary,
+
+        // Error Colors
+        error = error,
+        errorContainer = errorContainer,
+
+        // Success Colors
+        successDefault = Color(0xFF00BA88),  // Keeping custom colors
+        successDark = Color(0xFF00966D),
+        successDarkMode = Color(0xFF34EAB9),
+
+        // Warning Colors
+        warningDefault = Color(0xFFF4B740),
+        warningDark = Color(0xFF946200),
+        warningDarkMode = Color(0xFFFFD789)
+    )
+}
+
 @Immutable
 data class AppColors(
+    val white: Color,
+    val black: Color,
     val title: Color,
     val secondaryTitle: Color,
     val background: Color,
@@ -32,6 +64,8 @@ data class AppColors(
 
 // Light Theme Colors
 val LightAppColors = AppColors(
+    white = Color(0xFFFFFFFF), // ✅
+    black = Color(0xFF000000), // ✅
     title = Color(0xFF050505), // ✅
     secondaryTitle = Color(0xFF667080), // ✅
     background = Color(0xFFFFFFFF), // ✅
@@ -53,11 +87,13 @@ val LightAppColors = AppColors(
     // Warning Colors
     warningDefault = Color(0xFFF4B740), // ✅
     warningDark = Color(0xFF946200), // ✅
-    warningDarkMode = Color(0xFFFFD789), // ✅
+    warningDarkMode = Color(0xFFFFD789) // ✅
 )
 
 // Dark Theme Colors
 val DarkAppColors = AppColors(
+    white = Color(0xFFFFFFFF), // ✅
+    black = Color(0xFF000000), // ✅
     title = Color(0xFFE4E6EB), // ✅
     secondaryTitle = Color(0xFF667080), // ✅
     background = Color(0xFF1C1E21), // ✅
@@ -84,6 +120,8 @@ val DarkAppColors = AppColors(
 
 val LocalAppColors = staticCompositionLocalOf<AppColors> {
     AppColors(
+        white = Color.Unspecified,
+        black = Color.Unspecified,
         title = Color.Unspecified,
         secondaryTitle = Color.Unspecified,
         background = Color.Unspecified,
