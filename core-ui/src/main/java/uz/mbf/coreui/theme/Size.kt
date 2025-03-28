@@ -4,54 +4,55 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.dp
 
 @Immutable
 data class AppSize(
-    val size4Dp: Dp,
-    val size8Dp: Dp,
-    val size12Dp: Dp,
-    val size16Dp: Dp,
-    val size20Dp: Dp,
-    val size24Dp: Dp,
-    val size32Dp: Dp,
-    val size40Dp: Dp,
-    val size50Dp: Dp,
-    val size56Dp: Dp,
-    val size64Dp: Dp,
-    val size96Dp: Dp,
-    val size128Dp: Dp
+    val size4dp: Dp,
+    val size8dp: Dp,
+    val size12dp: Dp,
+    val size16dp: Dp,
+    val size20dp: Dp,
+    val size24dp: Dp,
+    val size32dp: Dp,
+    val size40dp: Dp,
+    val size50dp: Dp,
+    val size56dp: Dp,
+    val size64dp: Dp,
+    val size96dp: Dp,
+    val size128dp: Dp
 )
 
 val LocalAppSize = staticCompositionLocalOf<AppSize> {
     AppSize(
-        size4Dp = 4.dp,
-        size8Dp = 8.dp,
-        size12Dp = 12.dp,
-        size16Dp = 16.dp,
-        size20Dp = 20.dp,
-        size24Dp = 24.dp,
-        size32Dp = 32.dp,
-        size40Dp = 40.dp,
-        size50Dp = 50.dp,
-        size56Dp = 56.dp,
-        size64Dp = 64.dp,
-        size96Dp = 96.dp,
-        size128Dp = 128.dp
+        size4dp = 4.dp,
+        size8dp = 8.dp,
+        size12dp = 12.dp,
+        size16dp = 16.dp,
+        size20dp = 20.dp,
+        size24dp = 24.dp,
+        size32dp = 32.dp,
+        size40dp = 40.dp,
+        size50dp = 50.dp,
+        size56dp = 56.dp,
+        size64dp = 64.dp,
+        size96dp = 96.dp,
+        size128dp = 128.dp
     )
 }
 
 val appSize = AppSize(
-    size4Dp = 4.dp,
-    size8Dp = 8.dp,
-    size12Dp = 12.dp,
-    size16Dp = 16.dp,
-    size20Dp = 20.dp,
-    size24Dp = 24.dp,
-    size32Dp = 32.dp,
-    size40Dp = 40.dp,
-    size50Dp = 50.dp,
-    size56Dp = 56.dp,
-    size64Dp = 64.dp,
-    size96Dp = 96.dp,
-    size128Dp = 128.dp
+    size4dp = 4.dp,
+    size8dp = 8.dp,
+    size12dp = 12.dp,
+    size16dp = 16.dp,
+    size20dp = 20.dp,
+    size24dp = 24.dp,
+    size32dp = 32.dp,
+    size40dp = 40.dp,
+    size50dp = 50.dp,
+    size56dp = 56.dp,
+    size64dp = 64.dp,
+    size96dp = 96.dp,
+    size128dp = 128.dp
 )

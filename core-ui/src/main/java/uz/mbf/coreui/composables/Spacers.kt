@@ -50,3 +50,18 @@ fun Spacer36dp(modifier: Modifier = Modifier) {
 fun Spacer48dp(modifier: Modifier = Modifier) {
     Spacer(modifier = modifier.padding(all = 48.dp))
 }
+
+@Composable
+fun Spacer56dp(modifier: Modifier = Modifier) {
+    Spacer(modifier = modifier.padding(all = 56.dp))
+}
+
+@Composable
+fun Spacer64dp(modifier: Modifier = Modifier) {
+    Spacer(modifier = modifier.padding(all = 64.dp))
+}
+
+@Composable
+fun Spacer96dp(modifier: Modifier = Modifier) {
+    Spacer(modifier = modifier.padding(all = 96.dp))
+}

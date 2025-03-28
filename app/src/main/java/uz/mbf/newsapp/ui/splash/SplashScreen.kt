@@ -27,7 +27,7 @@ private fun SplashView() {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            modifier = Modifier.padding(bottom = NewsAppTheme.appSize.size128Dp),
+            modifier = Modifier.padding(bottom = NewsAppTheme.appSize.size128dp),
             painter = painterResource(R.drawable.ic_splash),
             contentDescription = null
         )
