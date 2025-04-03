@@ -1,7 +1,5 @@
 package uz.mbf.onboarding.ui
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
@@ -21,7 +19,6 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -44,6 +41,7 @@ import uz.mbf.coreui.composables.TextDisplaySmallBold
 import uz.mbf.coreui.composables.TextMedium
 import uz.mbf.coreui.theme.NewsAppTheme
 import uz.mbf.coreui.utils.AppPreview
+import uz.mbf.onboarding.data.contentList
 
 @Composable
 fun OnboardingScreen() {
@@ -171,10 +169,11 @@ private fun BottomContent(
                         content = {
                             LinkMedium(
                                 modifier = Modifier
-                                    .padding(end = NewsAppTheme.appSize.size8dp).clickable(
-                                    onClick = onClickBack,
-                                    role = Role.Button
-                                ),
+                                    .padding(end = NewsAppTheme.appSize.size8dp)
+                                    .clickable(
+                                        onClick = onClickBack,
+                                        role = Role.Button
+                                    ),
                                 text = stringResource(R.string.back),
                                 color = NewsAppTheme.appColors.bodyText
                             )
@@ -190,31 +189,6 @@ private fun BottomContent(
         }
     )
 }
-
-@Immutable
-data class OnBoardingContentData(
-    @DrawableRes val image: Int,
-    @StringRes val title: Int,
-    @StringRes val subtitle: Int
-)
-
-private val contentList = listOf<OnBoardingContentData>(
-    OnBoardingContentData(
-        image = R.drawable.ic_onboarding1,
-        title = R.string.onboarding_title1,
-        subtitle = R.string.onboarding_subtitle1
-    ),
-    OnBoardingContentData(
-        image = R.drawable.ic_onboarding2,
-        title = R.string.onboarding_title2,
-        subtitle = R.string.onboarding_subtitle2
-    ),
-    OnBoardingContentData(
-        image = R.drawable.ic_onboarding3,
-        title = R.string.onboarding_title3,
-        subtitle = R.string.onboarding_subtitle3
-    )
-)
 
 @AppPreview
 @Composable

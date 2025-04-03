@@ -20,7 +20,8 @@ fun ColorScheme.toAppColors(): AppColors {
 
         // Error Colors
         error = error,
-        errorContainer = errorContainer,
+        errorLight = onErrorContainer,
+        errorDark = errorContainer,
 
         // Success Colors
         successDefault = Color(0xFF00BA88),  // Keeping custom colors
@@ -48,8 +49,9 @@ data class AppColors(
     val primary: Color,
 
     // Error Colors
-    val errorContainer: Color,
     val error: Color,
+    val errorLight: Color,
+    val errorDark: Color,
 
     // Success Colors
     val successDefault: Color,
@@ -77,7 +79,8 @@ val LightAppColors = AppColors(
 
     // Error Colors
     error = Color(0xFFED2E7E), // ✅
-    errorContainer = Color(0xFFFF83B7), // ✅
+    errorLight = Color(0xFFED2E7E), // ✅
+    errorDark = Color(0xFFED2E7E), // ✅
 
     // Success Colors
     successDefault = Color(0xFF00BA88), // ✅
@@ -105,7 +108,8 @@ val DarkAppColors = AppColors(
 
     // Error Colors
     error = Color(0xFFC30052), // ✅
-    errorContainer = Color(0xFFED2E7E), // ✅
+    errorLight = Color(0xFFC30052), // ✅
+    errorDark = Color(0xFFC30052), // ✅
 
     // Success Colors
     successDefault = Color(0xFF00BA88), // ✅
@@ -133,7 +137,8 @@ val LocalAppColors = staticCompositionLocalOf<AppColors> {
 
         // Error Colors
         error = Color.Unspecified,
-        errorContainer = Color.Unspecified,
+        errorLight = Color.Unspecified,
+        errorDark = Color.Unspecified,
 
         // Success Colors
         successDefault = Color.Unspecified,

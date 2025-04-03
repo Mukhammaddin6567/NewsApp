@@ -2,13 +2,23 @@ package uz.mbf.coreui.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
+import uz.mbf.coreui.R
 import uz.mbf.coreui.theme.NewsAppTheme
 import uz.mbf.coreui.utils.AppPreview
 
@@ -292,6 +302,64 @@ fun LinkXSmall(
     )
 }
 
+@Composable
+fun LabelText(
+    modifier: Modifier = Modifier,
+    text: String,
+    isRequired: Boolean = false,
+    color: Color = NewsAppTheme.appColors.bodyText,
+    textAlign: TextAlign = TextAlign.Unspecified,
+    overFlow: TextOverflow = TextOverflow.Clip
+) {
+    Text(
+        modifier = modifier,
+        text = buildAnnotatedString {
+            append(text)
+            if (isRequired) {
+                append(" ")
+                pushStyle(SpanStyle(color = Color(0xFFC30052))) // Red asterisk
+                append("*")
+            }
+            pop()
+        },
+        style = NewsAppTheme.appTypography.textSmall,
+        textAlign = textAlign,
+        color = color,
+        maxLines = 1,
+        overflow = overFlow
+    )
+}
+
+@Composable
+fun ErrorText(
+    modifier: Modifier = Modifier,
+    text: String
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            painter = painterResource(R.drawable.ic_error),
+            tint = NewsAppTheme.appColors.errorDark,
+            contentDescription = null
+        )
+        Spacer2dp()
+        TextSmall(
+            modifier = modifier,
+            text = text,
+            color = NewsAppTheme.appColors.errorDark
+        )
+    }
+
+}
+
+@Preview
+@Composable
+private fun Test() {
+    NewsAppTheme {
+//        LabelText(text = "Required", isRequired = true)
+        ErrorText(text = "Error")
+    }
+}
+
 @AppPreview
 @Composable
 private fun MyPreview() {
@@ -301,9 +369,23 @@ private fun MyPreview() {
                 .fillMaxSize()
                 .background(NewsAppTheme.appColors.background)
         ) {
-            TextDisplayLarge(text = "TextDisplayLarge", maxLines = 1, overFlow = TextOverflow.Ellipsis)
-            TextDisplayMedium(text = "TextDisplayMedium", maxLines = 1, overFlow = TextOverflow.Ellipsis)
-            TextDisplaySmall(text = "TextDisplaySmall", maxLines = 1, overFlow = TextOverflow.Ellipsis)
+            LabelText(text = "Required")
+
+            /*TextDisplayLarge(
+                text = "TextDisplayLarge",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
+            TextDisplayMedium(
+                text = "TextDisplayMedium",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
+            TextDisplaySmall(
+                text = "TextDisplaySmall",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
             TextLarge(text = "TextLarge", maxLines = 1, overFlow = TextOverflow.Ellipsis)
             TextMedium(text = "TextMedium", maxLines = 1, overFlow = TextOverflow.Ellipsis)
             TextSmall(text = "TextSmall", maxLines = 1, overFlow = TextOverflow.Ellipsis)
@@ -311,13 +393,25 @@ private fun MyPreview() {
 
             Spacer48dp()
 
-            TextDisplayLargeBold(text = "TextDisplayLargeBold", maxLines = 1, overFlow = TextOverflow.Ellipsis)
-            TextDisplayMediumBold(text = "TextDisplayMediumBold", maxLines = 1, overFlow = TextOverflow.Ellipsis)
-            TextDisplaySmallBold(text = "TextDisplaySmallBold", maxLines = 1, overFlow = TextOverflow.Ellipsis)
+            TextDisplayLargeBold(
+                text = "TextDisplayLargeBold",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
+            TextDisplayMediumBold(
+                text = "TextDisplayMediumBold",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
+            TextDisplaySmallBold(
+                text = "TextDisplaySmallBold",
+                maxLines = 1,
+                overFlow = TextOverflow.Ellipsis
+            )
             LinkLarge(text = "LinkLarge", maxLines = 1, overFlow = TextOverflow.Ellipsis)
             LinkMedium(text = "LinkMedium", maxLines = 1, overFlow = TextOverflow.Ellipsis)
             LinkSmall(text = "LinkSmall", maxLines = 1, overFlow = TextOverflow.Ellipsis)
-            LinkXSmall(text = "LinkXSmall", maxLines = 1, overFlow = TextOverflow.Ellipsis)
+            LinkXSmall(text = "LinkXSmall", maxLines = 1, overFlow = TextOverflow.Ellipsis)*/
         }
     }
 }
