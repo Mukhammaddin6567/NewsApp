@@ -15,7 +15,7 @@ import uz.mbf.coreui.theme.NewsAppTheme
 import uz.mbf.coreui.utils.AppPreview
 
 @Composable
-internal fun GreetingView() {
+internal fun LoginGreetingView() {
     Column(
         modifier = Modifier.fillMaxWidth(),
         content = {
@@ -24,13 +24,13 @@ internal fun GreetingView() {
                 color = NewsAppTheme.appColors.title
             )
             TextDisplayLargeBold(
-                text = stringResource(R.string.again),
+                text = stringResource(R.string.again).plus(stringResource(R.string.exclamation)),
                 color = NewsAppTheme.appColors.primary
             )
             TextLarge(
                 text = stringResource(R.string.welcome_back),
                 color = NewsAppTheme.appColors.bodyText,
-                maxLines = 2
+                maxLines = 3
             )
         }
     )
@@ -45,7 +45,7 @@ private fun MyPreview() {
                 .fillMaxSize()
                 .background(NewsAppTheme.appColors.background)
         ) {
-            GreetingView()
+            LoginGreetingView()
         }
     }
 }
