@@ -8,6 +8,7 @@ import androidx.compose.ui.unit.dp
 
 @Immutable
 data class AppSize(
+    val size2dp: Dp,
     val size4dp: Dp,
     val size8dp: Dp,
     val size12dp: Dp,
@@ -25,6 +26,7 @@ data class AppSize(
 
 val LocalAppSize = staticCompositionLocalOf<AppSize> {
     AppSize(
+        size2dp = 2.dp,
         size4dp = 4.dp,
         size8dp = 8.dp,
         size12dp = 12.dp,
@@ -42,6 +44,7 @@ val LocalAppSize = staticCompositionLocalOf<AppSize> {
 }
 
 val appSize = AppSize(
+    size2dp = 2.dp,
     size4dp = 4.dp,
     size8dp = 8.dp,
     size12dp = 12.dp,

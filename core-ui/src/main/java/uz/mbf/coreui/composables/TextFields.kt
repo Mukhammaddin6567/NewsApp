@@ -2,7 +2,10 @@ package uz.mbf.coreui.composables
 
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.OutlinedTextField
@@ -25,7 +28,6 @@ fun PrimaryOutlinedTextField(
     isError: Boolean = false,
     errorText: String? = null
 ) {
-
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -57,6 +59,8 @@ fun PrimaryOutlinedTextField(
                 errorCursorColor = NewsAppTheme.appColors.errorDark,
                 errorContainerColor = NewsAppTheme.appColors.black,
                 disabledContainerColor = NewsAppTheme.appColors.input,
+                focusedContainerColor = NewsAppTheme.appColors.input,
+                unfocusedContainerColor = NewsAppTheme.appColors.input,
             )
         )
         if (errorText != null) {
@@ -74,14 +78,21 @@ fun PrimaryOutlinedTextField(
 @Composable
 private fun MyPreview() {
     NewsAppTheme {
-        PrimaryOutlinedTextField(
-            value = "Salom",
-            onValueChange = {},
-            label = "Required",
-            isRequiredLabel = true,
-            errorText = "Error",
-            isError = true,
-            trailingIcon = R.drawable.ic_close,
-        )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(NewsAppTheme.appColors.background)
+        ) {
+            PrimaryOutlinedTextField(
+                value = "Salom",
+                onValueChange = {},
+                label = "Required",
+                isRequiredLabel = true,
+                errorText = "Error",
+                isError = false,
+                trailingIcon = R.drawable.ic_close,
+            )
+        }
+
     }
 }

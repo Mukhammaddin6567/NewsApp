@@ -316,7 +316,6 @@ fun LabelText(
         text = buildAnnotatedString {
             append(text)
             if (isRequired) {
-                append(" ")
                 pushStyle(SpanStyle(color = Color(0xFFC30052))) // Red asterisk
                 append("*")
             }
