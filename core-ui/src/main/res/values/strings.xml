@@ -12,6 +12,7 @@
     <string name="get_started">Get Started</string>
     <string name="hello">Hello</string>
     <string name="again">Again</string>
+    <string name="submit">Submit</string>
     <string name="exclamation">!</string>
     <string name="welcome_back">Welcome back you\'ve\nbeen missed</string>
     <string name="sign_up_to_get_started">Sign up to get Started</string>
@@ -19,6 +20,12 @@
     <string name="password">Password</string>
     <string name="remember_me">Remember me</string>
     <string name="forgot_the_password">Forgot the password?</string>
+    <string name="forgot_password">Forgot\npassword?</string>
+    <string name="forgot_password_hint1">Don’t worry! it happens. Please select the\nemail or number associated with your account.</string>
+    <string name="via_email">via Email:</string>
+    <string name="via_email_hint">example@youremail.com</string>
+    <string name="via_sms">via SMS:</string>
+    <string name="via_sms_hint">+998 12 345 67 89</string>
     <string name="login">Login</string>
     <string name="or_continue_with">or continue with</string>
     <string name="facebook">Facebook</string>
